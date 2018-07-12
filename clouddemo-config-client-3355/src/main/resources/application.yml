@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: clouddemo-config-client-3355

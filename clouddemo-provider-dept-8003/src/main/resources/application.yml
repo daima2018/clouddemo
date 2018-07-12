@@ -1,0 +1,32 @@
+server:
+  port: 8003
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.dpf.cloud.entities
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+spring:
+  application:
+    name: clouddemo-dept
+  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud_3
+    username: root
+    password: mysql$123
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-idle: 5
+      max-wait-millis: 200
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: clouddemo-dept8003
+    prefer-ip-address: true
+
+info:
+  app.name: dpf-cloud
+  company.name: dpf

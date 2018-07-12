@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: clouddemo-config-dept-client-8001

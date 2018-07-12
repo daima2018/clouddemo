@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: clouddemo-config-eureka-client-7001
